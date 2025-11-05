@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the Home page for WDD 231 - Course Home Page for Bavekuno Brian and his About.">
+    <meta name="author" content="Bavekuno Brian">
+    <title>WDD 231 - Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script src="scripts/page.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-group">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Site Logo" width="80" height="80">
+            </a>
+            <span class="site-name">Bavekuno Brian</span>
+        </div>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="final.html">Final</a></li>
+        </ul>
+    </nav>
+
+    <h1>Home</h1>
+
+    <main class="main">
+        <section class="hero">
+
+            <div class="container hero__container">
+                <div class="about">
+                    <h2 class="section-title about__title">About Me</h2>
+                    <div class="about__content">I am Bavekuno Brian from Jinja, Uganda, a student at Brigham Young
+                        University, BYU IDAHO. Am currently
+                        pursuing a Bachelor's Degree in Software Development. I have great ehthusiasm in
+                        developing Websites and
+                        am so delighted to work with my fellow team members in working together to achieve great
+                        success in web
+                        projects.
+                    </div>
+                </div>
+
+
+                <div class="about__photo">
+                    <h2 class="section-title about__photo-title">Student Photo</h2>
+                    <div class="student-photo"><img src="images/student.jpg" alt="profile" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Web Certificate Courses -->
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
+            </div>
+
+            <div class="course-grid" id="courseGrid"></div>
+
+            <p class="credit-total">
+                The total credits for courses listed above is <strong id="totalCredits">0</strong>.
+            </p>
+        </section>
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <footer>
+
+            <p>
+                © <span id="currentyear"></span> <span class="name">Bavekuno Brian</span>, <span class="location">Jinja,
+                    Uganda</span>
+            </p>
+
+            <p id="lastModified"></p>
+        </footer>
+</body>
+
+</html>
