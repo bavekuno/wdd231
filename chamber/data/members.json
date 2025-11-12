@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Nile River Adventures",
+    "address": "Plot 10, Main Street",
+    "phone": "+256 414 500001",
+    "website": "https://www.nileriveradventures.com",
+    "imagefilename": "nile-adventures.png",
+    "membershiplevel": 3,
+    "otherinfo": "Premier Gold member specializing in white-water rafting and tourism."
+  },
+  {
+    "name": "Jinja Steel Works",
+    "address": "Industrial Area, Block B",
+    "phone": "+256 414 500002",
+    "website": "https://www.jinjasteel.co.ug",
+    "imagefilename": "jinja-steel.png",
+    "membershiplevel": 2,
+    "otherinfo": "Silver member providing local steel fabrication and construction materials."
+  },
+  {
+    "name": "Source Cafe & Bistro",
+    "address": "15 Market Road",
+    "phone": "+256 414 500003",
+    "website": "https://www.sourcebistro.com",
+    "imagefilename": "source-cafe.png",
+    "membershiplevel": 1,
+    "otherinfo": "Standard member. Popular local eatery and networking spot."
+  },
+  {
+    "name": "Victoria Logistics",
+    "address": "P.O. Box 7001",
+    "phone": "+256 414 500004",
+    "website": "https://www.victorialogistics.ug",
+    "imagefilename": "victoria-logistics.png",
+    "membershiplevel": 3,
+    "otherinfo": "Gold member, offering regional and international freight solutions."
+  },
+  {
+    "name": "Busoga Tech Hub",
+    "address": "Innovation Center, 2nd Floor",
+    "phone": "+256 414 500005",
+    "website": "https://www.busogahub.org",
+    "imagefilename": "busoga-tech.png",
+    "membershiplevel": 1,
+    "otherinfo": "Standard member, focused on IT training and startup incubation."
+  },
+  {
+    "name": "Green Earth Agriculture",
+    "address": "Rural Route 5, Iganga Rd",
+    "phone": "+256 414 500006",
+    "website": "https://www.greenearthagri.ug",
+    "imagefilename": "green-earth.png",
+    "membershiplevel": 2,
+    "otherinfo": "Silver member supporting sustainable farming practices and local produce."
+  },
+  {
+    "name": "The Jinja Grand Hotel",
+    "address": "4th Street, Downtown",
+    "phone": "+256 414 500007",
+    "website": "https://www.jinjagrandhotel.com",
+    "imagefilename": "jinja-hotel.png",
+    "membershiplevel": 3,
+    "otherinfo": "Gold member. Premium lodging and conference facilities."
+  }
+]
