@@ -1,14 +1,16 @@
-/* Custom Normalize/Reset */
+/* Custom Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Mobile-First Base Styles (Below 768px) */
+/* Variables and Global Styles (Mobile-First) */
 :root {
     --primary-color: #008080;
+    /* Deep Teal */
     --secondary-color: #FFC300;
+    /* Sunrise Orange/Gold */
     --background-color: #F7F7F7;
     --text-color: #333333;
     --light-text: #ffffff;
@@ -20,7 +22,13 @@ body {
     color: var(--text-color);
 }
 
-/* --- Header & Navigation Consistency --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Global Header & Navigation --- */
 header {
     background-color: var(--primary-color);
     color: var(--light-text);
@@ -28,6 +36,18 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .navigation {
@@ -51,10 +71,6 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.navigation li:last-child a {
-    border-bottom: none;
-}
-
 .navigation a:hover,
 .navigation a.active {
     background-color: var(--secondary-color);
@@ -72,7 +88,7 @@ header {
     padding: 0.5rem 0;
 }
 
-/* --- Footer Consistency --- */
+/* --- Global Footer & Social --- */
 footer {
     background-color: var(--primary-color);
     color: var(--light-text);
@@ -82,19 +98,25 @@ footer {
     font-size: 0.85rem;
 }
 
-.footer-info,
-.development-info {
-    padding: 0.5rem 0;
+.social__container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
 }
 
-/* --- Directory Specific Styles --- */
+.social__link img {
+    width: 30px;
+    height: 30px;
+}
+
+/* --- Directory Base Styles (Consolidated) --- */
 .directory-main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* View Controls */
 .view-controls {
     text-align: right;
     margin-bottom: 1rem;
@@ -114,145 +136,18 @@ footer {
     color: var(--light-text);
 }
 
-/* Member Container (Default is Grid on Mobile/Card View) */
-#member-container.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-.member-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.member-card img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem;
-}
-
-.member-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.member-card a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.member-card a:hover {
-    text-decoration: underline;
-}
-
-/* List View Style */
-#member-container.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.member-card.list-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Stacked on mobile */
-    align-items: center;
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    margin: 0;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.member-card.list-item h3 {
-    grid-column: 1 / 2;
-}
-
-.member-card.list-item p {
-    margin: 0.2rem 0;
-}
-
-.member-card.list-item img {
-    display: none;
-}
-
-
-/* --- Tablet/Desktop Media Query (Desktop View) --- */
-@media screen and (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-
-    .navigation {
-        display: flex;
-        width: auto;
-        margin-top: 0;
-    }
-
-    .navigation li a {
-        padding: 0.5rem 1rem;
-        border-bottom: none;
-    }
-
-    #menu-toggle {
-        display: none;
-    }
-
-    /* Footer Layout */
-    footer {
-        display: flex;
-        justify-content: space-around;
-        text-align: left;
-    }
-
-    #member-container.grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .member-card.list-item {
-        grid-template-columns: 2fr 3fr 1.5fr 1.5fr 1fr;
-        gap: 1rem;
-        padding: 1rem;
-
-    }
-
-    .member-card.list-item p {
-        margin: 0;
-    }
-
-    .member-card.list-item .other-info {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #member-container.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* --- Directory Specific Styles --- */
-.directory-main {
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Default for Mobile: Single Column */
+/* Directory Container & Card/List BASE styles */
 #member-container.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 1.5rem;
+}
+
+#member-container.list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
 }
 
 .member-card {
@@ -261,29 +156,28 @@ footer {
     padding: 1.5rem;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Standardized box-shadow */
     text-align: center;
 }
 
-.member-card img {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem;
-    border-radius: 4px;
-}
-
 .member-card h3 {
-    color: #008080;
+    color: var(--primary-color);
+    /* Standardized color variable */
     margin-bottom: 0.5rem;
 }
 
-/* --- LIST VIEW (Line Item) --- */
-#member-container.list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
+/* Grid View Image Sizing (Mobile-First Default) */
+.member-card img {
+    max-width: 120px;
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    border-radius: 4px;
+    will-change: transform;
 }
 
+/* List Item Styles (BASE) */
 .member-card.list-item {
     display: grid;
     grid-template-columns: 1fr;
@@ -306,77 +200,99 @@ footer {
     font-size: 0.9rem;
 }
 
+/* --- Membership Level Cards (Color Standardization) --- */
+.member-level {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gold-member {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid #e0b000;
+}
+
+.silver-member {
+    background-color: #C0C0C0;
+    color: var(--text-color);
+    border: 1px solid #a0a0a0;
+}
+
+.standard-member {
+    background-color: #E0FFFF;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+/* --- Tablet/Desktop View (768px+) --- */
 @media screen and (min-width: 768px) {
-    #member-container.grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* Header/Nav Overrides */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
 
-    /* Desktop List */
-    .member-card.list-item {
-        grid-template-columns: 2fr 3fr 1.5fr 1.5fr 1fr;
-        gap: 1rem;
-        padding: 1rem;
-        align-items: center;
-    }
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Header Logo/Icon Sizing */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-container img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-/* --- Social Media Icons in Footer --- */
-.social__container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
-}
-
-.social__link img {
-    width: 30px;
-    height: 30px;
-}
-
-.member-card img {
-    max-width: 120px;
-    width: 100%;
-    height: 100px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 1rem;
-    border-radius: 4px;
-    will-change: transform;
-}
-
-.member-card.list-item img {
-    display: none;
-}
-
-/* --- Tablet/Desktop Media Query (Desktop View) --- */
-@media screen and (min-width: 768px) {
     .logo-container img {
         width: 80px;
         height: 80px;
     }
 
-    .member-card img {
-        max-width: 140px;
-        height: 120px;
+    .navigation {
+        display: flex;
+        width: auto;
+        margin-top: 0;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Footer Layout Overrides */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    /* Directory Grid View Overrides (2 Columns) */
+    #member-container.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Directory List View Overrides (Multi-Column) */
+    .member-card.list-item {
+        /* Name | Address | Phone | Website | Level */
+        grid-template-columns: 2fr 3fr 1.5fr 1.5fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .member-card.list-item .member-level {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Large Desktop Grid (3 Columns) */
+    #member-container.grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
