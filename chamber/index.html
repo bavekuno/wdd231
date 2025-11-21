@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Jinja Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Welcome to the Jinja Chamber of Commerce. Discover local events, join our community, and grow your business.">
+    <meta name="author" content="Bavekuno Brian">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Jinja Chamber of Commerce - Home">
+    <meta property="og:description" content="Grow your business and connect with the vibrant Jinja community.">
+    <meta property="og:image" content="https://bavekuno.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://bavekuno.github.io/wdd231/chamber/index.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <script src="scripts/home.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Jinja Chamber of Commerce Logo" />
+            <h1>Jinja Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero-nile.jpg" alt="Source of the Nile River in Jinja" loading="lazy">
+            <div class="hero-content">
+                <h1>Jinja Chamber of Commerce</h1>
+                <p>Connecting businesses, advancing our community, and driving economic growth.</p>
+
+                <a href="join.html" class="cta-button">Join Chamber</a>
+            </div>
+        </section>
+
+
+        <h2>Home</h2>
+
+        <div class="content-grid">
+            <section class="events-section card">
+                <h2>Events</h2>
+                
+                <article class="event-item">
+                    <h3>Networking Breakfast</h3>
+                    <p>Date: Friday, Dec 5th at 8:00 AM</p>
+                    <p>Location: The Jinja Grand Hotel</p>
+                    <a href="events.html">View All Events</a>
+                </article>
+
+                <article class="event-item">
+                    <h3>Business Growth Workshop</h3>
+                    <p>Date: Wednesday, Dec 10th at 2:00 PM</p>
+                    <p>Location: Chamber Conference Room</p>
+                    <a href="events.html">View All Events</a>
+            </section>
+
+            <section class="weather-current-section card">
+                <h2>Current Weather</h2>
+                <div id="current-weather">
+                </div>
+            </section>
+
+
+            <section class="weather-forecast-section card">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-container">
+                </div>
+            </section>
+
+
+        </div>
+
+        <section class="spotlights-section">
+            <h2>Member Spotlights 🌟</h2>
+            <div id="spotlight-container" class="grid">
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy;<span id="current-year"></span> Jinja Chamber of Commerce</p>
+            <p>123 Nile Avenue, Jinja, Uganda</p>
+            <p>Email: info@jinjachamber.org</p>
+        </div>
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <div class="development-info">
+            <p>Jinja Chamber of Commerce </p>
+            <p>Bavekuno Brian | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+/* ADD TO THE END OF main.css */
+
+/* --- Home Page Specific Styles --- */
+.homepage-main {
+    padding: 0;
+    /* Remove padding for edge-to-edge hero */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base Card Styling (Applied to Event and Weather sections) */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 50vh;
+    /* 50% of viewport height */
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    /* Darken image for text readability */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light-text);
+    text-align: center;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffda6a;
+    /* Lighter shade of secondary */
+}
+
+/* --- Weather Section --- */
+#current-weather {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#current-weather img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.forecast-item {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+/* --- Member Spotlights Section --- */
+.spotlights-section {
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#spotlight-container {
+    /* Reuses existing grid styling from directory page */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+/* ADDED/MODIFIED CSS FOR LAYOUT (insert into home.css) */
+
+/* Add a style for the new secondary CTA */
+.cta-button-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--light-text);
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border: 2px solid var(--light-text);
+    /* Use a clear border */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    /* Space between the two CTAs */
+}
+
+.cta-button-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Content Grid Layout (New Class) --- */
+/* Mobile (Default) - Stacked Vertically */
+.content-grid {
+    padding: 0 1rem;
+    /* Add padding to contain the cards */
+}
+
+.events-section h2,
+.weather-current-section h2,
+.weather-forecast-section h2 {
+    /* Style for the dark bar at the top of the cards in the wireframe */
+    background-color: var(--text-color);
+    /* Use dark text color for background */
+    color: var(--light-text);
+    padding: 0.5rem 1.5rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    /* Extend background to card edges */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+/* --- MODIFIED Media Query (768px+) in home.css to create 3-column layout --- */
+@media screen and (min-width: 768px) {
+
+    /* REMOVE the grid-template-columns from .homepage-main */
+    .homepage-main {
+        /* ... existing styles ... */
+        display: block;
+        /* Change back to block to remove unwanted main grid */
+        padding: 0;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        /* Events is wider (2 parts), Weather sections are 1 part each */
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    /* Ensure the Events/Weather sections sit in the new grid */
+    .events-section,
+    .weather-current-section,
+    .weather-forecast-section {
+        margin: 0;
+        /* Remove mobile margin */
+    }
+
+    /* Spotlights should still span the full 3 columns below the grid */
+    .spotlights-section {
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+
+    /* Keep the spotlight grid layout for 3 columns on desktop */
+    #spotlight-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Weather Section --- */
+#current-weather {
+    /* REMOVE: display: flex; align-items: center; gap: 10px; font-size: 1.2rem; margin-bottom: 1rem; */
+
+    /* NEW STRUCTURE FOR ICON + TEXT */
+    /* Add this class to your home.css */
+    .weather-details-container {
+        display: flex;
+        align-items: flex-start;
+        /* Align icon and text to the top */
+        gap: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .weather-details-container img {
+        width: 60px;
+        /* Make icon slightly larger */
+        height: 60px;
+        flex-shrink: 0;
+        /* Prevent the image from shrinking */
+        margin: 0;
+    }
+
+    .weather-text {
+        font-size: 1rem;
+        /* Adjust font size for the details */
+        line-height: 1.2;
+    }
+
+    .weather-text p {
+        margin: 0;
+    }
+
+    .weather-text .temp {
+        font-size: 1.5rem;
+        /* Emphasize current temperature */
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* 3-Day Forecast Display */
+#forecast-container {
+    font-size: 1rem;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.forecast-day {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.forecast-day .day-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.forecast-day .temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* --- Media Queries for Home Page Layout (Tablet/Desktop) --- */
+@media screen and (min-width: 768px) {
+    .hero {
+        height: 60vh;
+
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .homepage-main {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .events-section {
+        grid-column: 1 / 2;
+        margin: 0;
+    }
+
+    .weather-section {
+        grid-column: 2 / 3;
+        margin: 0;
+    }
+
+    .spotlights-section {
+        grid-column: 1 / 3;
+        /* Spans both columns */
+        padding: 0;
+    }
+
+    /* Spotlights Grid Overrides (2 Columns) */
+    #spotlight-container.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homepage-main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /* Spotlights Grid Overrides (3 Columns) */
+    #spotlight-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
