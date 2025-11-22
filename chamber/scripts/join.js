@@ -1,24 +1,22 @@
 // Function to set the current timestamp on form load
 function setTimestamp() {
     const timestampField = document.getElementById('timestamp');
-    // Get the current date and time in ISO format for better consistency
+    // Get the current date and time 
     if (timestampField) {
         timestampField.value = new Date().toISOString();
     }
 }
 
-// Add this script to your existing join.js file or create a new script tag in your HTML
-
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const navigation = document.querySelector('.navigation');
-    navigation.classList.toggle('open'); // Toggle the 'open' class
+    navigation.classList.toggle('open'); 
 });
 
 // Close the navigation when a link is clicked
 document.querySelectorAll('.navigation a').forEach(link => {
     link.addEventListener('click', function () {
         const navigation = document.querySelector('.navigation');
-        navigation.classList.remove('open'); // Remove the 'open' class
+        navigation.classList.remove('open'); 
     });
 });
 
@@ -26,7 +24,7 @@ document.querySelectorAll('.navigation a').forEach(link => {
 document.querySelectorAll('.close-button').forEach(button => {
     button.addEventListener('click', function () {
         const modal = button.closest('.modal');
-        modal.style.display = 'none'; // Hide the modal
+        modal.style.display = 'none'; 
     });
 });
 

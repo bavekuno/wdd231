@@ -1,11 +1,8 @@
-/* ==========================================================
-   JOIN PAGE LAYOUT (Mobile First)
-   ========================================================== */
+/*JOIN PAGE LAYOUT (Mobile First) */
 
 .join-content {
     display: flex;
     flex-direction: column;
-    /* Stacks form and cards vertically on small screens */
     gap: 20px;
     padding: 1rem;
 }
@@ -48,7 +45,6 @@
 
 .membership-form .submit-button {
     background-color: var(--primary-color, #008080);
-    /* Use your primary color variable */
     color: white;
     padding: 15px 20px;
     border: none;
@@ -59,18 +55,14 @@
 }
 
 
-/* ==========================================================
-   MEMBERSHIP CARDS & ANIMATION
-   ========================================================== */
+/* MEMBERSHIP CARDS & ANIMATION */
 .membership-levels {
     display: grid;
     gap: 15px;
-    /* On mobile, cards will stack */
 }
 
 .membership-levels h2 {
     grid-column: 1 / -1;
-    /* Make the heading span the width */
     text-align: center;
 }
 
@@ -87,7 +79,6 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Specific delays for a staggered initial animation */
 .card:nth-child(2) {
     /* NP Card */
     animation: fadeInSlideUp 0.6s ease-out 0.1s forwards;
@@ -116,12 +107,9 @@
 }
 
 
-/* ==========================================================
-   MODAL STYLING
-   ========================================================== */
+/*  MODAL STYLING */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -129,15 +117,12 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* FIX 1: Darken overlay to improve contrast/obscurity (1.66:1) */
     background-color: rgba(0, 0, 0, 0.8);
-    /* Changed from 0.4 to 0.8 */
 }
 
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -145,9 +130,7 @@
 }
 
 .close-button {
-    /* FIX 2: Darken text color to pass contrast (2.30:1 fail) */
     color: #333333;
-    /* Changed from #aaa to site's dark text color (14.89:1 pass) */
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -161,25 +144,19 @@
 }
 
 
-/* ==========================================================
-   MEDIA QUERY for Larger Screens
-   ========================================================== */
+/*  MEDIA QUERY for Larger Screens */
 @media (min-width: 768px) {
     .join-content {
         flex-direction: row;
-        /* Form on left, cards on right */
         align-items: flex-start;
-        /* Align content to the top */
     }
 
     .membership-form {
         flex: 2;
-        /* Takes up a larger portion of the space */
     }
 
     .membership-levels {
         flex: 1;
-        /* Takes up a smaller portion */
         display: flex;
         flex-direction: column;
     }
