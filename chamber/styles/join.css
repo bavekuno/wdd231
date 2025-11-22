@@ -47,7 +47,7 @@
 }
 
 .membership-form .submit-button {
-    background-color: var(--primary-color, #4CAF50);
+    background-color: var(--primary-color, #008080);
     /* Use your primary color variable */
     color: white;
     padding: 15px 20px;
@@ -129,8 +129,9 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+    /* FIX 1: Darken overlay to improve contrast/obscurity (1.66:1) */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Changed from 0.4 to 0.8 */
 }
 
 .modal-content {
@@ -144,7 +145,9 @@
 }
 
 .close-button {
-    color: #aaa;
+    /* FIX 2: Darken text color to pass contrast (2.30:1 fail) */
+    color: #333333;
+    /* Changed from #aaa to site's dark text color (14.89:1 pass) */
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -156,7 +159,6 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 
 
 /* ==========================================================
