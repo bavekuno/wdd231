@@ -1,0 +1,188 @@
+/* ==========================================================
+   JOIN PAGE LAYOUT (Mobile First)
+   ========================================================== */
+
+.join-content {
+    display: flex;
+    flex-direction: column;
+    /* Stacks form and cards vertically on small screens */
+    gap: 20px;
+    padding: 1rem;
+}
+
+.membership-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.membership-form fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.membership-form legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.membership-form .submit-button {
+    background-color: var(--primary-color, #4CAF50);
+    /* Use your primary color variable */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+
+/* ==========================================================
+   MEMBERSHIP CARDS & ANIMATION
+   ========================================================== */
+.membership-levels {
+    display: grid;
+    gap: 15px;
+    /* On mobile, cards will stack */
+}
+
+.membership-levels h2 {
+    grid-column: 1 / -1;
+    /* Make the heading span the width */
+    text-align: center;
+}
+
+.membership-levels .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Animation Properties */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Specific delays for a staggered initial animation */
+.card:nth-child(2) {
+    /* NP Card */
+    animation: fadeInSlideUp 0.6s ease-out 0.1s forwards;
+}
+
+.card:nth-child(3) {
+    /* Bronze Card */
+    animation: fadeInSlideUp 0.6s ease-out 0.3s forwards;
+}
+
+.card:nth-child(4) {
+    /* Silver Card */
+    animation: fadeInSlideUp 0.6s ease-out 0.5s forwards;
+}
+
+.card:nth-child(5) {
+    /* Gold Card */
+    animation: fadeInSlideUp 0.6s ease-out 0.7s forwards;
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   MODAL STYLING
+   ========================================================== */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* ==========================================================
+   MEDIA QUERY for Larger Screens
+   ========================================================== */
+@media (min-width: 768px) {
+    .join-content {
+        flex-direction: row;
+        /* Form on left, cards on right */
+        align-items: flex-start;
+        /* Align content to the top */
+    }
+
+    .membership-form {
+        flex: 2;
+        /* Takes up a larger portion of the space */
+    }
+
+    .membership-levels {
+        flex: 1;
+        /* Takes up a smaller portion */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .membership-levels h2 {
+        text-align: left;
+    }
+}

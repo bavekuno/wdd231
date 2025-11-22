@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Jinja Chamber | Membership Application</title>
+
+    <meta name="description"
+        content="Welcome to the Jinja Chamber of Commerce. Discover local events, join our community, and grow your business.">
+    <meta name="author" content="Bavekuno Brian">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Jinja Chamber of Commerce - Join">
+    <meta property="og:description" content="Grow your business and connect with the vibrant Jinja community.">
+    <meta property="og:image" content="https://bavekuno.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://bavekuno.github.io/wdd231/chamber/join.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/join.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Jinja Chamber of Commerce Logo" />
+            <h1>Jinja Chamber of Commerce</h1>
+        </div>
+
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main class="join-page">
+        <h1>Join the Jinja Chamber of Commerce</h1>
+
+        <section class="join-content">
+            <form method="get" action="thankyou.html" class="membership-form">
+                <h2>Membership Application</h2>
+
+                <label for="fname">First Name*
+                    <input type="text" id="fname" name="fname" required autocomplete="given-name"
+                        title="Applicant's First Name">
+                </label>
+
+                <label for="lname">Last Name*
+                    <input type="text" id="lname" name="lname" required autocomplete="family-name"
+                        title="Applicant's Last Name">
+                </label>
+
+                <label for="orgtitle">Organizational Title
+                    <input type="text" id="orgtitle" name="orgtitle" title="Organizational Title (e.g., CEO, Manager)"
+                        autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. Founder">
+                </label>
+
+                <label for="email">Email*
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                        title="Applicant's Email Address" placeholder="name@example.com">
+                </label>
+
+                <label for="tel">Mobile Phone Number*
+                    <input type="tel" id="tel" name="tel" required autocomplete="tel"
+                        title="Applicant's Mobile Phone Number">
+                </label>
+
+                <label for="orgname">Business/Organization Name*
+                    <input type="text" id="orgname" name="orgname" required autocomplete="organization"
+                        title="Business/Organization Name">
+                </label>
+
+                <fieldset>
+                    <legend>Select Membership Level*</legend>
+                    <label>
+                        <input type="radio" name="level" value="np" required>
+                        NP Membership (Non-Profit, No Fee)
+                    </label>
+                    <label>
+                        <input type="radio" name="level" value="bronze" required>
+                        Bronze Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="level" value="silver" required>
+                        Silver Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="level" value="gold" required>
+                        Gold Membership
+                    </label>
+                </fieldset>
+
+                <label for="description" class="textarea-label">Business/Organization Description
+                    <textarea id="description" name="description"
+                        title="Description of your Business/Organization"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Apply for Membership" class="submit-button">
+
+            </form>
+
+            <aside class="membership-levels">
+                <h2>Membership Levels & Benefits</h2>
+                <div class="card" id="np-card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations, with no fee.</p>
+                    <button class="modal-trigger" data-modal="np-modal">Learn More</button>
+                </div>
+                <div class="card" id="bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level benefits for growing businesses.</p>
+                    <button class="modal-trigger" data-modal="bronze-modal">Learn More</button>
+                </div>
+                <div class="card" id="silver-card">
+                    <h3>Silver Membership</h3>
+                    <p>Increased visibility and event discounts.</p>
+                    <button class="modal-trigger" data-modal="silver-modal">Learn More</button>
+                </div>
+                <div class="card" id="gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium benefits, advertising, and sponsorship priority.</p>
+                    <button class="modal-trigger" data-modal="gold-modal">Learn More</button>
+                </div>
+            </aside>
+        </section>
+
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>NP Membership Benefits</h3>
+                <p>Basic listing in directory, event announcements.</p>
+            </div>
+        </div>
+
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Bronze Membership Benefits</h3>
+                <p>Includes NP benefits plus basic directory listing, member-only training access, and newsletter
+                    features.</p>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Silver Membership Benefits</h3>
+                <p>Includes Bronze benefits plus event discounts, enhanced directory listing, and social media mentions.
+                </p>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Gold Membership Benefits</h3>
+                <p>Includes Silver benefits plus homepage spotlight opportunities, priority event sponsorship, and
+                    exclusive training access.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-info">
+            <p>&copy;<span id="current-year"></span> Jinja Chamber of Commerce</p>
+            <p>123 Nile Avenue, Jinja, Uganda</p>
+            <p>Email: info@jinjachamber.org</p>
+        </div>
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <div class="development-info">
+            <p>Jinja Chamber of Commerce </p>
+            <p>Bavekuno Brian | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
