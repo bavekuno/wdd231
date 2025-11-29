@@ -1,6 +1,7 @@
 // Import the places array from the data module
+import { places } from '../data/places.mjs';
 
-//  Places Card Generation 
+// --- 1. Places Card Generation ---
 const placesGrid = document.getElementById('places-grid');
 
 function displayPlaces(placesList) {
@@ -31,7 +32,8 @@ function displayPlaces(placesList) {
 // Initialize Display
 displayPlaces(places);
 
-//  Visitor Message Logic (localStorage)
+
+//  2. Visitor Message Logic (localStorage)
 const messageElement = document.getElementById('visitor-message');
 const lastVisitKey = 'last-visit-timestamp';
 
