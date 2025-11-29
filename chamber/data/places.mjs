@@ -26,7 +26,7 @@ export const places = [
     {
         title: "Busoga Royal Palace",
         address: "Igenge Hill, Jinja",
-        description: "Explore the cultural heritage of the Busoga Kingdom at the majestic residence of the Kyabazinga.",
+        description: "Explore the cultural heritage of the Busoga Kingdom in Jinja at the majestic residence of the Kyabazinga.",
         image: "images/royal-palace.webp"
     },
     {

@@ -31,7 +31,6 @@ function displayPlaces(placesList) {
 // Initialize Display
 displayPlaces(places);
 
-
 //  Visitor Message Logic (localStorage)
 const messageElement = document.getElementById('visitor-message');
 const lastVisitKey = 'last-visit-timestamp';
