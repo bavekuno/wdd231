@@ -1,5 +1,4 @@
 // Import the places array from the data module
-import { places } from '../data/places.mjs';
 
 //  Places Card Generation 
 const placesGrid = document.getElementById('places-grid');
