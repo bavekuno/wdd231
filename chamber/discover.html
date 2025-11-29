@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Jinja | Jinja Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover the beauty and business opportunities in Jinja. Explore local attractions and community features.">
+    <meta name="author" content="Bavekuno Brian">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Discover Jinja">
+    <meta property="og:description" content="Explore the best places in Jinja, Uganda.">
+    <meta property="og:image" content="https://bavekuno.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://bavekuno.github.io/wdd231/chamber/discover.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="scripts/discover.js"></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Jinja Chamber of Commerce Logo" />
+            <h1>Jinja Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-container">
+        <aside class="visitor-message-area">
+            <div id="visitor-message" class="message-card">
+            </div>
+        </aside>
+
+        <section class="discover-gallery">
+            <h1>Discover Jinja</h1>
+            <div id="places-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy;<span id="current-year"></span> Jinja Chamber of Commerce</p>
+            <p>123 Nile Avenue, Jinja, Uganda</p>
+            <p>Email: info@jinjachamber.org</p>
+        </div>
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <div class="development-info">
+            <p>Jinja Chamber of Commerce</p>
+            <p>Bavekuno Brian | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
