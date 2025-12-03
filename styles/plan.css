@@ -1,0 +1,123 @@
+/*Color Variables based on Site Plan */
+:root {
+    --primary-color: #0056B3;
+    --secondary-color: #FFC107;
+    --background-color: #F4F4F9;
+    --text-color: #212529;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* base Styles and Typography*/
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Section Styling */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+/* List and Scenario Styling  */
+ul,
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Color Schema Table Styling */
+#color-schema table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#color-schema th,
+#color-schema td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+#color-schema th {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+}
+
+#color-schema tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+#color-schema tr:nth-child(2) td:nth-child(2) {
+    background-color:#F4F4F9;
+}
+
+#color-schema tr:nth-child(3) td:nth-child(2) {
+    background-color: white;
+    color: var(--text-color);
+}
+
+#color-schema tr:nth-child(4) td:nth-child(2) {
+    background-color: #F4F4F9;
+    color: var(--text-color);
+}
+
+#color-schema tr:nth-child(5) td:nth-child(2) {
+    background-color: #212529;
+    color: white;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+strong {
+    color: var(--primary-color);
+}
