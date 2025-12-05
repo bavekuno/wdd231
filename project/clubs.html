@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs
+        | Volcano High School</title>
+
+    <meta name="description" content="Official clubs
+         of all student clubs and organizations at Volcano High School. Find a club that interests you!">
+    <meta name="author" content="Bavekuno Brian">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Volcano High School Clubs clubs
+    ">
+    <meta property="og:description"
+        content="Find all official student clubs at Volcano High School, including contact and meeting information.">
+    <meta property="og:image" content="https://bavekuno.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://bavekuno.github.io/wdd231/chamber/clubs
+    .html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main1.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <script src="scripts/clubs.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Volcano High Logo">
+
+            <h1>Volcano High School</h1>
+        </div>
+
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href=" gallery.html">Gallery</a></li>
+                <li><a href="clubs.html" class="active">Clubs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="clubs
+    -main">
+        <h2>Student Clubs & Organizations</h2>
+        <div class="view-controls">
+            <button id="grid-view" class="active-view">Card View</button>
+            <button id="list-view">List View</button>
+        </div>
+
+        <div id="member-container" class="grid">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy;<span id="current-year"></span> Volcano High School</p>
+            <p>123 Nile Avenue, Jinja, Uganda</p>
+            <p>Email: info@volcanohighschool.org</p>
+        </div>
+
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <div class="development-info">
+            <p>Volcano High School </p>
+            <p>Bavekuno Brian | WDD 231</p>
+
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

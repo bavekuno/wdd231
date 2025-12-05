@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Advanced Physics",
+        "address": "Room 302 - Science Wing",
+        "phone": "Mr. Newton",
+        "website": "https://volcanohs.edu/physics",
+        "imagefilename": "physics-class.webp",
+        "membershiplevel": 3,
+        "otherinfo": "AP Level Course. Lab fees apply. Prerequisite: Algebra II."
+    },
+    {
+        "name": "Varsity Football",
+        "address": "Field House",
+        "phone": "Coach Carter",
+        "website": "https://volcanohs.edu/athletics",
+        "imagefilename": "football.webp",
+        "membershiplevel": 3,
+        "otherinfo": "Elite Athletics Program. Tryouts required. State Champions 2024."
+    },
+    {
+        "name": "Intro to Algebra",
+        "address": "Room 101 - Math Hall",
+        "phone": "Mrs. Johnson",
+        "website": "https://volcanohs.edu/math",
+        "imagefilename": "algebra.webp",
+        "membershiplevel": 1,
+        "otherinfo": "Core Curriculum. Standard textbook fees apply."
+    },
+    {
+        "name": "Visual Arts Club",
+        "address": "Art Studio B",
+        "phone": "Ms. Da Vinci",
+        "website": "https://volcanohs.edu/arts",
+        "imagefilename": "art-club.webp",
+        "membershiplevel": 2,
+        "otherinfo": "Elective Course. Materials provided. Open to all grades."
+    },
+    {
+        "name": "Computer Science 101",
+        "address": "Lab 4",
+        "phone": "Mr. Gates",
+        "website": "https://volcanohs.edu/cs",
+        "imagefilename": "cs-class.webp",
+        "membershiplevel": 2,
+        "otherinfo": "Elective Course. Focus on Python and Web Development."
+    },
+    {
+        "name": "School Band",
+        "address": "Music Room",
+        "phone": "Mr. Bach",
+        "website": "https://volcanohs.edu/band",
+        "imagefilename": "band.webp",
+        "membershiplevel": 3,
+        "otherinfo": "Premier Program. Includes travel for competitions."
+    },
+    {
+        "name": "World History",
+        "address": "Room 205 - Humanities",
+        "phone": "Mrs. Herodotus",
+        "website": "https://volcanohs.edu/history",
+        "imagefilename": "history.webp",
+        "membershiplevel": 1,
+        "otherinfo": "Core Curriculum. Required for Grade 10."
+    }
+]

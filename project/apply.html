@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apply | Volcano High</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Volcano High School">
+    <meta property="og:description"
+        content=" Explore our diverse classes and extracurricular activities at Volcano High School.">
+    <meta property="og:image" content="https://bavekuno.github.io/wdd231//images/og-image.webp">
+    <meta property="og:url" content="https://bavekuno.github.io/wdd231/apply.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/apply.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/apply.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Volcano High Logo">
+
+            <h1>Volcano High School</h1>
+        </div>
+        <nav><button id="menu-toggle">Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="apply.html" class="active">Apply</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="apply-content">
+        <form action="thankyou.html" class="application-form">
+            <h2>Student Application</h2>
+            <label>Student Name <input type="text" name="name" required></label>
+            <label>Parent Email <input type="email" name="email" required></label>
+            <label>Mobile <input type="tel" name="phone" required></label>
+            <fieldset>
+                <legend>Tuition Plan</legend>
+                <label><input type="radio" name="plan" value="day" required> Day Scholar</label>
+                <label><input type="radio" name="plan" value="boarding"> Boarding</label>
+                <label><input type="radio" name="plan" value="intl"> International</label>
+            </fieldset>
+            <input type="hidden" id="timestamp" name="timestamp">
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+
+        <aside class="tuition-levels">
+            <div class="card">
+                <h3>Day Scholar</h3>
+                <p>Standard tuition. No housing.</p><button class="modal-trigger" data-modal="m1">Details</button>
+            </div>
+            <div class="card">
+                <h3>Boarding</h3>
+                <p>Full room & board included.</p><button class="modal-trigger" data-modal="m2">Details</button>
+            </div>
+            <div class="card">
+                <h3>International</h3>
+                <p>Visa support & ESL included.</p><button class="modal-trigger" data-modal="m3">Details</button>
+            </div>
+        </aside>
+
+        <div id="m1" class="modal">
+            <div class="modal-content"><span class="close-button">&times;</span>
+                <h3>Day Scholar</h3>
+                <p>Includes lunch.</p>
+            </div>
+        </div>
+        <div id="m2" class="modal">
+            <div class="modal-content"><span class="close-button">&times;</span>
+                <h3>Boarding</h3>
+                <p>3 meals + dorm.</p>
+            </div>
+        </div>
+        <div id="m3" class="modal">
+            <div class="modal-content"><span class="close-button">&times;</span>
+                <h3>International</h3>
+                <p>Full support package.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy;<span id="current-year"></span> Volcano High School</p>
+            <p>123 Nile Avenue, Jinja, Uganda</p>
+            <p>Email: info@volcanohighschool.org</p>
+        </div>
+
+
+        <section class="social">
+            <div class="container social__container">
+                <a href="https://linkedin.com" class="social__link">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" class="social__link">
+                    <img src="images/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" class="social__link">
+                    <img src="images/twitter.svg" alt="X" />
+                </a>
+            </div>
+        </section>
+
+        <div class="development-info">
+            <p>Volcano High School</p>
+            <p>Bavekuno Brian | WDD 231</p>
+
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

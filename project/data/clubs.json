@@ -1,0 +1,65 @@
+[
+    {
+        "clubname": "Volcano Robotics Team",
+        "advisor": "Ms. Chen, Room 305",
+        "meetingtime": "Wednesdays, 3:30 PM",
+        "contactemail": "robotics@volcanohigh.edu",
+        "imagefilename": "robotics-club.jpg",
+        "categorylevel": 3,
+        "mission": "Design, build, and program robots for local and regional competitions."
+    },
+    {
+        "clubname": "Photography & Media",
+        "advisor": "Mr. Lopez, Arts Studio",
+        "meetingtime": "Mondays, 4:00 PM",
+        "contactemail": "photomedia@volcanohigh.edu",
+        "imagefilename": "photo-club.jpg",
+        "categorylevel": 2,
+        "mission": "Silver-level club focusing on digital photography, editing, and yearbook contributions."
+    },
+    {
+        "clubname": "Environmental Action",
+        "advisor": "Mrs. Green, Science Lab",
+        "meetingtime": "Thursdays, 3:00 PM",
+        "contactemail": "eac@volcanohigh.edu",
+        "imagefilename": "eco-club.png",
+        "categorylevel": 1,
+        "mission": "Standard-level club. Organizing campus cleanups, recycling drives, and sustainability campaigns."
+    },
+    {
+        "clubname": "Mathletes Honors Society",
+        "advisor": "Dr. Sigma, Room 101",
+        "meetingtime": "Tuesdays, 7:00 AM (A.M. Meeting)",
+        "contactemail": "mathletes@volcanohigh.edu",
+        "imagefilename": "math-club.jpg",
+        "categorylevel": 3,
+        "mission": "Gold-level club for advanced problem-solving and preparation for math competitions."
+    },
+    {
+        "clubname": "Drama & Theatre Guild",
+        "advisor": "Ms. Evans, Auditorium",
+        "meetingtime": "Daily during production season",
+        "contactemail": "drama@volcanohigh.edu",
+        "imagefilename": "drama-club.jpg",
+        "categorylevel": 2,
+        "mission": "Putting on two major performances a year, focusing on acting, staging, and technical work."
+    },
+    {
+        "clubname": "Peer Tutoring",
+        "advisor": "Counselor Smith, Library",
+        "meetingtime": "Flexible, after-school hours",
+        "contactemail": "peertutors@volcanohigh.edu",
+        "imagefilename": "tutoring-club.jpg",
+        "categorylevel": 1,
+        "mission": "Providing academic support and mentorship to younger or struggling students."
+    },
+    {
+        "clubname": "Model UN",
+        "advisor": "Mr. Williams, History Wing",
+        "meetingtime": "Tuesdays, 3:15 PM",
+        "contactemail": "modelun@volcanohigh.edu",
+        "imagefilename": "model-un.jpg",
+        "categorylevel": 3,
+        "mission": "Gold-level club simulating the United Nations, debating global issues, and developing diplomacy skills."
+    }
+]

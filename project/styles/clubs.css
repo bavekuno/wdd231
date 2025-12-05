@@ -1,0 +1,50 @@
+/* Custom Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables and Global Styles (Mobile-First) */
+:root {
+    --primary-color: #A52A2A;
+     --secondary-color: #FF7F50;
+     --background-color: #F7F7F7;
+    --text-color: #333333;
+    --light-text: #ffffff;
+}
+
+
+.member-level {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gold-member {
+     background-color: #008080; 
+    color: var(--light-text);
+    border: 1px solid #006060;
+}
+
+.silver-member {
+    background-color: #FFC300; 
+    color: var(--text-color);
+    border: 1px solid #e0b000;
+}
+
+.standard-member {
+    background-color: #4682B4;
+    color: var(--light-text);
+    border: 1px solid #366294;
+}
+
+
+ 
